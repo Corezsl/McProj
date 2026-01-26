@@ -3,7 +3,6 @@
 An experimental project focused on building an **intelligent Minecraft AI agent** capable of **understanding player commands, interacting naturally via language**, and eventually **learning through reinforcement learning**.
 
 
-
 ## Overview
 
 This project aims to explore the intersection of **large language models (LLMs)**, **game agents**, and **reinforcement learning** within the Minecraft environment.
@@ -109,6 +108,10 @@ Minecraft provides:
 - LLM-based planning and tool use
 
 ---
+
+##Used Repos
+- Prismarine Mineflayer https://github.com/PrismarineJS/mineflayer
+- Minellabs Minerl https://github.com/minerllabs/minerl
 
 ## License
 
