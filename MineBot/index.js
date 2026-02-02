@@ -4,7 +4,7 @@ const { GoalBlock, GoalFollow } = goals
 
 const bot = mineflayer.createBot({
   host: 'localhost',
-  port: 51255,
+  port: 58037,
   username: 'LocalConTester',
   version: '1.21.6',
   hideErrors: false
@@ -22,44 +22,31 @@ bot.once("spawn", () => {
 
 bot.on('chat', (username, message) => {
   if (username === bot.username) return
-  if (message === 'come') return
-    const target = bot.players[username].entity
-    if (!target) {
+  if (message.toLowerCase() === 'come') return
+    if (!bot.players[username].entity) {
       bot.chat("I don't see you !")
       return
     }
 
-    bot.pathfinder.setGoal(new GoalFollow(target, 1))
-  if (message === 'hello') {
+    bot.pathfinder.setGoal(new GoalFollow(bot.players[username].entity, 1))
+  if (message.toLowerCase() === 'hello') {
     bot.chat(`Hello ${username}!`)
   }
 
-  if (message === 'attack me')
-    stopattack = false
-    while (!stopattack)
-      bot.pathfinder.setGoal(new GoalFollow(target, 1))
-      attackPlayer(username)
+  if (message.toLowerCase() === 'attack me'){
+    while (bot.players[username].entity.health != 0){
+      bot.pathfinder.setGoal(new GoalFollow(bot.players[username].entity, 1))
+      if (bot.entity.position.xzDistanceTo(bot.players[username].entity.position.xy <= 3)){
+        bot.attack(bot.players[username].entity)
+      }
+      
+    }
+  }
     
   if (message === 'attack') attackEntity()
 })
 
 
-
-function attackPlayer (username) {
-  const player = bot.players[username]
-  distance = Math.sqrt(Math.abs(bot.entity.position.x - player.entity.position.x) ** 2, Math.abs(bot.entity.position.y - player.entity.position.y) ** 2, Math.abs(bot.entity.position.z - player.entity.position.z) ** 2)
-  if (!player || !player.entity) {
-    bot.chat('I can\'t see you')
-  } 
-  if (distance < 4){
-    bot.attack(player.entity)
-    bot.chat(`Attacking ${player.username}`)
-
-  }
-  else {
-    bot.chat(player + 'out of range')
-  }
-}
 
 function attackEntity () {
   const entity = bot.nearestEntity()
