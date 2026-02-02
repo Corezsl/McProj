@@ -10,7 +10,6 @@ const bot = mineflayer.createBot({
   hideErrors: false
 })
 
-const RANGE_GOAL = 3
 
 bot.loadPlugin(pathfinder)
 
