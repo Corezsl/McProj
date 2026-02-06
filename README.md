@@ -5,7 +5,7 @@ An experimental project focused on building an **intelligent Minecraft AI agent*
 
 ## Overview
 
-This project aims to explore the intersection of **large language models (LLMs)**, **game agents**, and **reinforcement learning** within the Minecraft environment.
+This project aims to explore the intersection of **large language models (LLMs)**, **game agents**, with future potential for **reinforcement learning** within the Minecraft environment.
 
 The long-term vision is an AI companion that can:
 - Understand natural language instructions
@@ -16,8 +16,7 @@ The long-term vision is an AI companion that can:
 ---
 
 ## Socials 
-***Discord***: AlucardOffD2   
-Add me if you want to make any suggestions related to the project
+***Discord***: Corezsl 
 
 ---
 
@@ -47,10 +46,9 @@ Add me if you want to make any suggestions related to the project
 
 ## Tech Stack
 
-- **Python**
+- **Python/JavaScript**
 - **Minecraft Java Edition**
 - **LLM APIs** (for command understanding & dialogue)
-- **MineRL** (planned – reinforcement learning environment)
 - **Gym-style environments** (future integration)
 
 ---
@@ -74,7 +72,7 @@ Add me if you want to make any suggestions related to the project
    - Update internal state / memory
 
 5. **Learning Layer (Future)**
-   - Reinforcement learning via MineRL
+   - Reinforcement learning
    - Policy optimisation from experience
 
 ---
@@ -84,7 +82,7 @@ Add me if you want to make any suggestions related to the project
 -  Basic command parsing & execution
 -  Persistent memory and context tracking
 -  Multi-step task planning
--  Reinforcement learning with MineRL
+-  Reinforcement learning
 -  Skill acquisition (mining, crafting, combat, building)
 -  Long-term autonomous behaviour
 
@@ -106,12 +104,12 @@ Minecraft provides:
 - OpenAI Minecraft research
 - Autonomous agent research in simulated environments
 - LLM-based planning and tool use
+- Project SID
 
 ---
 
 ## Used Repos
 - Prismarine Mineflayer https://github.com/PrismarineJS/mineflayer
-- Minellabs Minerl https://github.com/minerllabs/minerl
 
 ## License
 
