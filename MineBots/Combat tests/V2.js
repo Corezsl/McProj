@@ -77,7 +77,7 @@ function findNearestPlayer() {
 bot.on('physicsTick', () => {
     if (!fighting || !targetName) return
 
-    const target = bot.players[targetName]?.entity
+    const target = bot.players[targetName].entity
     if (!target) {
         fighting = false
         bot.chat("Target lost.")
@@ -88,8 +88,8 @@ bot.on('physicsTick', () => {
     const now = Date.now()
 
     if (now - lastGoalUpdate > 500) {
-    bot.pathfinder.setGoal(new GoalFollow(target, 1), true)
-    lastGoalUpdate = now
+        bot.pathfinder.setGoal(new GoalFollow(target, 1), true)
+        lastGoalUpdate = now
     }
 
     // ===== Simple Prediction =====
@@ -126,3 +126,10 @@ bot.on('physicsTick', () => {
 })
 
 
+// ===== ERROR HANDLING =====
+bot.on('kicked', console.log)
+bot.on('error', console.log)
+bot.on('respawn', () => {
+  fighting = false
+  targetName = null
+})

@@ -17,7 +17,7 @@ bot.once('spawn', () => {
   movements.allowSprinting = true
   bot.pathfinder.setMovements(movements)
 })
-bot.on('whisper', (username, message) => {
+bot.on('whisper', (message) => {
   bot.chat(message)
 })
 bot.on('chat', (username, message) => {
