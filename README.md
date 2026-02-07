@@ -1,4 +1,4 @@
-# Minecraft AI Project (McProj)
+# Minecraft AI Project (McProj) 
 
 An experimental project focused on building an **intelligent Minecraft AI agent** capable of **understanding player commands, interacting naturally via language**, and eventually **learning through reinforcement learning**.
 
