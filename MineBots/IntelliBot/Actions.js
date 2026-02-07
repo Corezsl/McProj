@@ -16,7 +16,7 @@ export const actions = {
     }
   },
   follow: (bot, playerName) => {
-    const target = bot.players[playerName]?.entity;
+    const target = bot.players[playerName].entity;
     if (target) {
       bot.pathfinder.setGoal(new goals.GoalFollow(target, 2), true);
       bot.chat(`Following ${playerName}`);

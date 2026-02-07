@@ -2,7 +2,7 @@ import mineflayer from 'mineflayer';
 import { pathfinder } from 'mineflayer-pathfinder'
 import { actions } from './Actions.js';
 import { think } from './Brain.js';
-import { getPerception } from './perception.js';
+import { getPerception } from './Perception.js';
 
 
 const bot = mineflayer.createBot({ host: 'localhost', port: 25565, username: 'IntelliBot' });
